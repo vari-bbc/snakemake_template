@@ -1,0 +1,10 @@
+.snakemake
+logs/*
+!logs/.keep
+raw_data/*
+!raw_data/.keep
+benchmarks/*
+!benchmarks/.keep
+results/*
+!results/.keep
+

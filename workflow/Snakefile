@@ -1,0 +1,30 @@
+# load configuration
+# -----------------------------------------------------
+configfile: "config/config.yaml"
+
+
+# load rules
+# -----------------------------------------------------
+include: "rules/helloworld.smk"
+
+
+# optional messages, log and error handling
+# -----------------------------------------------------
+onstart:
+    print("\n--- Analysis started ---\n")
+
+
+onsuccess:
+    print("\n--- Workflow finished! ---\n")
+
+
+onerror:
+    print("\n--- An error occurred! ---\n")
+
+
+# target rules
+# -----------------------------------------------------
+rule all:
+    input:
+        "results/helloworld/helloworld.txt",
+    default_target: True

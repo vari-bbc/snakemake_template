@@ -1,0 +1,11 @@
+executor: slurm
+jobs: 50
+max-jobs-per-timespan: "2/1s"
+slurm-keep-successful-logs: True
+slurm-delete-logfiles-older-than: -1
+slurm-logdir: "logs/slurm/"
+latency-wait: 20
+printshellcmds: True
+use-envmodules: True
+use-conda: False
+use-singularity: False

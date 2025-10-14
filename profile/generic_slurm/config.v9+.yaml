@@ -1,0 +1,16 @@
+executor: cluster-generic
+cluster-generic-submit-cmd: "mkdir -p logs/{rule}; sbatch \
+--export=ALL \
+--nodes 1 \
+--ntasks-per-node {threads} \
+--mem={resources.mem_gb}G \
+-t 120:00:00 \
+-o logs/slurm/{rule}/{resources.log_prefix}.o \
+-e logs/slurm/{rule}/{resources.log_prefix}.e"
+jobs: 50
+max-jobs-per-timespan: "2/1s"
+latency-wait: 20
+printshellcmds: True
+use-envmodules: True
+use-conda: False # job will fail if this is True and conda is not installed
+use-singularity: True

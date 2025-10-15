@@ -27,4 +27,5 @@ onerror:
 rule all:
     input:
         "results/helloworld/helloworld.txt",
+        "results/helloworld_docker/helloworld.txt",
     default_target: True

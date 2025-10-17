@@ -1,0 +1,17 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+description: entries for the sample sheet
+properties:
+  sample:
+    type: string
+    description: sample name/identifier
+  fq1:
+    type: string
+    description: names of fastq.gz files, read 1
+  fq2:
+    type: string
+    description: names of fastq.gz files, read 2
+
+required:
+  - sample
+  - fq1
+  - fq2

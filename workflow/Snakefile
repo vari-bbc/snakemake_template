@@ -5,7 +5,10 @@ configfile: "config/config.yaml"
 
 # load rules
 # -----------------------------------------------------
+include: "rules/common.smk"
 include: "rules/helloworld.smk"
+include: "rules/qc.smk"
+
 
 
 # optional messages, log and error handling
@@ -28,4 +31,5 @@ rule all:
     input:
         "results/helloworld/helloworld.txt",
         "results/helloworld_docker/helloworld.txt",
+        "results/multiqc/multiqc_report.html"
     default_target: True

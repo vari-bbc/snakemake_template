@@ -1,1 +1,5 @@
 samplesheet: "config/samples.tsv"
+
+modules:
+  fastqc: "bbc2/fastqc/fastqc-0.12.1"
+  multiqc: "bbc2/multiqc/multiqc-1.28"

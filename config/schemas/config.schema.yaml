@@ -1,0 +1,14 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+description: main configuration schema for the workflow
+properties:
+  samplesheet:
+    type: string
+    description: path to sample-sheet TSV file
+
+  modules:
+    type: object
+
+
+required:
+  - samplesheet
+  - modules

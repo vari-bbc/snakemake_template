@@ -13,5 +13,5 @@ latency-wait: 20
 printshellcmds: True
 use-envmodules: True
 use-conda: False # job will fail if this is True and conda is not installed
-use-singularity: True
+use-singularity: True # Do not turn on use-conda and use-singularity at the same time. See https://github.com/snakemake/snakemake/issues/3202
 singularity-args: "--cleanenv"

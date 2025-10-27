@@ -57,6 +57,10 @@ rule fastqc:
         log_prefix=lambda wildcards: "_".join(wildcards) if len(wildcards) > 0 else "log"
     envmodules:
         config['modules']['fastqc']
+    conda:
+        "../envs/qc.yaml"
+    container:
+        "docker://clinicalgenomics/fastqc:0.12.1"
     shell:
         """
         {{
@@ -85,6 +89,10 @@ rule multiqc:
         log_prefix=lambda wildcards: "_".join(wildcards) if len(wildcards) > 0 else "log"
     envmodules:
         config['modules']['multiqc']
+    conda:
+        "../envs/qc.yaml"
+    container:
+        "docker://multiqc/multiqc:v1.28"
     shell:
         """
         {{

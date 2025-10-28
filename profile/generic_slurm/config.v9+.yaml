@@ -19,4 +19,5 @@ printshellcmds: True
 # In particular, turning on either conda or env-modules together with singularity will cause Snakemake to try to run the module or the conda env within the container. 
 # See https://github.com/snakemake/snakemake/issues/3202
 software-deployment-method: "env-modules" #["env-modules","apptainer","conda"]
+apptainer-args: "--cleanenv"
 singularity-args: "--cleanenv"

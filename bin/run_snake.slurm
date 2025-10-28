@@ -9,9 +9,8 @@
 #SBATCH --partition=long
 
 
-snakemake_module="bbc2/snakemake/snakemake-9.13.2" 
-
-module load $snakemake_module
+module load bbc2/snakemake/snakemake-9.13.2
+module load bbc2/apptainer/apptainer-v1.4.3-1.el8
 
 # make logs dir if it does not exist already. 
 logs_dir="logs/"
